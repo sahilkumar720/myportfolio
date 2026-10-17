@@ -1,9 +1,6 @@
 // Handles admin login. There is only ever one admin, whose username/password
 // live in your .env file (see ADMIN_USERNAME / ADMIN_PASSWORD).
-//
-// This keeps things simple for a personal portfolio project. If you ever
-// wanted this to be more production-grade, you'd store a hashed password
-// in the database instead of plain text in .env.
+
 
 import jwt from "jsonwebtoken";
 
