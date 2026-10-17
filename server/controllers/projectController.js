@@ -1,6 +1,6 @@
 // CRUD logic for portfolio projects.
-// GET routes are public (anyone visiting the site can see the projects).
-// POST/PUT/DELETE are protected by the `protect` middleware (admin only).
+// GET routes 
+.
 
 import Project from "../models/Project.js";
 
