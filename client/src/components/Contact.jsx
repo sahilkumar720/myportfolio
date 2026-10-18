@@ -1,9 +1,3 @@
-// "Contact me" section — name, email, and a message box, all POSTed
-// to the backend (/api/messages), which saves them to MongoDB. View
-// submitted messages later from the admin dashboard at /admin.
-// (Name and email are optional on the backend, but collected here
-// since a reply address is useful.)
-
 import { useState } from "react";
 import { sendMessage } from "../api/api.js";
 import Reveal from "./Reveal.jsx";
