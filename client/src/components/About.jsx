@@ -1,6 +1,3 @@
-// "About me" section — photo, bio text, three info cards, and a
-// row of real tool icons. Content comes from portfolioData.js.
-
 import { FiCode, FiBriefcase } from "react-icons/fi";
 import { FaGraduationCap } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
