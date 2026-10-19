@@ -1,6 +1,3 @@
-// Site footer — logo, email, copyright, social links.
-// Edit `profile` and `socials` in portfolioData.js to change these.
-
 import { IoMail } from "react-icons/io5";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { profile, socials } from "../data/portfolioData.js";
