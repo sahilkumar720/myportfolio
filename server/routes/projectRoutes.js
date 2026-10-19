@@ -9,14 +9,16 @@ import {
 import protect from "../middleware/auth.js";
 
 const router = express.Router();
+const asyncHandler = (controller) => (req, res, next) =>
+  Promise.resolve(controller(req, res, next)).catch(next);
 
 // Public
-router.get("/", getProjects);
-router.get("/:id", getProjectById);
+router.get("/", asyncHandler(getProjects));
+router.get("/:id", asyncHandler(getProjectById));
 
 // Admin only
-router.post("/", protect, createProject);
-router.put("/:id", protect, updateProject);
-router.delete("/:id", protect, deleteProject);
+router.post("/", protect, asyncHandler(createProject));
+router.put("/:id", protect, asyncHandler(updateProject));
+router.delete("/:id", protect, asyncHandler(deleteProject));
 
 export default router;

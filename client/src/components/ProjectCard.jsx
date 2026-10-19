@@ -1,29 +1,26 @@
 // A single project card in the "My Work" grid.
-
-import { FiArrowUpRight } from "react-icons/fi";
 import "./ProjectCard.css";
 
-const ProjectCard = ({ project }) => {
-  const link = project.liveLink || project.githubLink || "#";
-
+const ProjectCard = ({ project, onClick, index = 0 }) => {
   return (
-    <a
-      href={link}
-      target={link !== "#" ? "_blank" : undefined}
-      rel="noreferrer"
+    <button
+      type="button"
       className="project-card"
-      style={{ backgroundImage: `url(${project.image})` }}
+      onClick={onClick}
+      aria-label={`View details for ${project.title}`}
+      style={{
+        backgroundImage: `url(${project.image})`,
+        "--project-delay": `${(index % 8) * 70}ms`,
+      }}
     >
       <div className="project-card-footer">
         <div>
           <h3>{project.title}</h3>
           <p>{project.category}</p>
         </div>
-        <span className="project-card-icon">
-          <FiArrowUpRight />
-        </span>
+        <span className="project-card-icon" aria-hidden="true">↗</span>
       </div>
-    </a>
+    </button>
   );
 };
 

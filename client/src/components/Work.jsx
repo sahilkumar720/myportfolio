@@ -5,6 +5,7 @@
 import { useEffect, useState } from "react";
 import { fetchProjects } from "../api/api.js";
 import ProjectCard from "./ProjectCard.jsx";
+import ProjectModal from "./ProjectModal.jsx";
 import Reveal from "./Reveal.jsx";
 import "./Work.css";
 
@@ -15,6 +16,7 @@ const Work = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [showAll, setShowAll] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   useEffect(() => {
     fetchProjects()
@@ -54,10 +56,21 @@ const Work = () => {
       <div className="work-grid">
         {visibleProjects.map((project, index) => (
           <Reveal key={project._id} delay={(index % 4) * 0.08}>
-            <ProjectCard project={project} />
+            <ProjectCard
+              project={project}
+              index={index}
+              onClick={() => setSelectedProject(project)}
+            />
           </Reveal>
         ))}
       </div>
+
+      {selectedProject && (
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
 
       {!showAll && projects.length > INITIAL_COUNT && (
         <div className="work-more">
@@ -71,3 +84,11 @@ const Work = () => {
 };
 
 export default Work;
+
+
+
+
+
+
+
+

@@ -31,7 +31,19 @@ app.get("/api/health", (req, res) => {
 // Catch-all error handler (keeps the server from crashing on a thrown error)
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).json({ message: "Something went wrong on the server" });
+  const statusCode =
+    err.name === "ValidationError" || err.name === "CastError" || err.type === "entity.parse.failed"
+      ? 400
+      : err.statusCode >= 400 && err.statusCode < 500
+        ? err.statusCode
+        : 500;
+  const message =
+    statusCode === 400 && err.message
+      ? err.message
+      : statusCode === 500
+        ? "Something went wrong on the server"
+        : err.message;
+  res.status(statusCode).json({ message });
 });
 
 const PORT = process.env.PORT || 5000;

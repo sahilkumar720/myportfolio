@@ -32,6 +32,14 @@ const projectSchema = new mongoose.Schema(
       type: String, // link to the source code
       default: "",
     },
+    videoUrl: {
+      type: String, // link to a project walkthrough
+      default: "",
+    },
+    techStack: {
+      type: [String],
+      default: [],
+    },
     order: {
       type: Number, // controls display order on the site (lower = first)
       default: 0,

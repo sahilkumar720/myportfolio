@@ -11,7 +11,7 @@ const AdminLogin = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const { login } = useAuth();
+  const { login, authError } = useAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -30,6 +30,7 @@ const AdminLogin = () => {
     <div className="admin-auth-wrap">
       <form onSubmit={handleSubmit} className="admin-auth-form">
         <h1>Admin Login</h1>
+        {authError && <p className="admin-session-notice" role="status">{authError}</p>}
         <input
           type="text"
           placeholder="Username"

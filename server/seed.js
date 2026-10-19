@@ -17,6 +17,7 @@ const starterProjects = [
     category: "Full Stack (MERN)",
     description: "An online study/e-learning platform built with the MERN stack.",
     image: "https://placehold.co/600x400/1e1730/f5f5f5?text=Study+Now",
+    techStack: ["React", "Node.js", "Express", "MongoDB"],
     order: 1,
   },
   {
@@ -24,6 +25,7 @@ const starterProjects = [
     category: "Full Stack (MERN)",
     description: "A self-taught full-stack project exploring voice/task assistant features.",
     image: "https://placehold.co/600x400/1e1730/f5f5f5?text=Virtual+Assistant",
+    techStack: ["React", "Node.js", "Express", "MongoDB"],
     order: 2,
   },
   {
@@ -31,6 +33,7 @@ const starterProjects = [
     category: "Full Stack (MERN)",
     description: "A hotel booking web app with a React frontend and Node/Express backend.",
     image: "https://placehold.co/600x400/1e1730/f5f5f5?text=Hotelmony",
+    techStack: ["React", "Node.js", "Express", "MongoDB"],
     order: 3,
   },
 ];

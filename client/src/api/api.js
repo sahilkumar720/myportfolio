@@ -17,6 +17,26 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
+api.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    const requestUrl = error.config?.url || "";
+    const method = (error.config?.method || "get").toLowerCase();
+    const isProtectedRequest =
+      (requestUrl === "/messages" && method === "get") ||
+      (requestUrl.startsWith("/messages/") && method === "delete") ||
+      (requestUrl === "/projects" && method === "post") ||
+      (requestUrl.startsWith("/projects/") && ["put", "delete"].includes(method));
+
+    if (error.response?.status === 401 && isProtectedRequest) {
+      localStorage.removeItem("adminToken");
+      window.dispatchEvent(new Event("admin-auth-expired"));
+    }
+
+    return Promise.reject(error);
+  }
+);
+
 // ---- Projects ----
 export const fetchProjects = () => api.get("/projects").then((res) => res.data);
 export const createProject = (data) => api.post("/projects", data).then((res) => res.data);

@@ -4,14 +4,55 @@
   gap: 24px;
 }
 
+.work-grid .reveal-visible .project-card {
+  animation: project-card-enter 0.5s both;
+  animation-delay: var(--project-delay, 0ms);
+}
+
 .work-status {
   text-align: center;
   color: var(--color-text-secondary);
   padding: 40px 0;
+  animation: work-status-enter 0.35s ease both;
 }
 
 .work-more {
   display: flex;
   justify-content: center;
   margin-top: 40px;
+}
+
+.work-more .btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.work-more .btn:hover {
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--color-accent) 24%, transparent);
+}
+
+@keyframes project-card-enter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes work-status-enter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work-grid .reveal-visible .project-card,
+  .work-status {
+    animation: none;
+  }
 }
