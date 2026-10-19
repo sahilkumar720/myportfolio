@@ -1,49 +1,91 @@
 import {
-  SiVite,
+  SiBootstrap,
+  SiCloudinary,
+  SiDocker,
   SiExpress,
-  SiMongodb,
+  SiFirebase,
+  SiFigma,
   SiGit,
   SiGithub,
-  SiFigma,
-  SiFirebase,
+  SiGooglegemini,
+  SiHtml5,
+  SiJavascript,
+  SiLangchain,
+  SiLanggraph,
+  SiMongodb,
+  SiMongoose,
+  SiMysql,
+  SiNextdotjs,
   SiPostman,
+  SiRazorpay,
+  SiReact,
+  SiRedis,
+  SiRedux,
+  SiRender,
+  SiTailwindcss,
+  SiTypescript,
+  SiVercel,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import {
-  FaHtml5,
+  FaAws,
   FaCss3Alt,
-  FaJsSquare,
-  FaReact,
-  FaNodeJs,
   FaDatabase,
-  FaShieldAlt,
-  FaBolt,
+  FaBrain,
   FaCode,
-  FaDesktop,
+  FaComments,
+  FaJava,
+  FaNetworkWired,
+  FaNodeJs,
+  FaProjectDiagram,
+  FaSearch,
+  FaServer,
 } from "react-icons/fa";
+import { SiJsonwebtokens } from "react-icons/si";
 import { skills } from "../data/portfolioData.js";
 import Reveal from "./Reveal.jsx";
 import "./Skills.css";
 
 const skillIcons = {
-  html5: FaHtml5,
+  javascript: SiJavascript,
+  typescript: SiTypescript,
+  java: FaJava,
+  sql: FaDatabase,
+  react: SiReact,
+  nextjs: SiNextdotjs,
+  redux: SiRedux,
+  html5: SiHtml5,
   css3: FaCss3Alt,
-  javascript: FaJsSquare,
-  react: FaReact,
-  vite: SiVite,
-  responsive: FaDesktop,
+  tailwind: SiTailwindcss,
+  bootstrap: SiBootstrap,
   node: FaNodeJs,
   express: SiExpress,
+  api: FaServer,
+  jwt: SiJsonwebtokens,
+  firebase: SiFirebase,
   mongodb: SiMongodb,
-  jwt: FaShieldAlt,
-  api: FaCode,
-  rest: FaBolt,
+  mongoose: SiMongoose,
+  mysql: SiMysql,
+  redis: SiRedis,
+  aws: FaAws,
+  docker: SiDocker,
+  render: SiRender,
+  vercel: SiVercel,
+  cloudinary: SiCloudinary,
   git: SiGit,
   github: SiGithub,
+  postman: SiPostman,
   vscode: VscVscode,
   figma: SiFigma,
-  firebase: SiFirebase,
-  postman: SiPostman,
+  razorpay: SiRazorpay,
+  gemini: SiGooglegemini,
+  llm: FaBrain,
+  prompt: FaComments,
+  rag: FaSearch,
+  embeddings: FaProjectDiagram,
+  langchain: SiLangchain,
+  langgraph: SiLanggraph,
+  mcp: FaNetworkWired,
 };
 
 const Skills = () => {
@@ -65,15 +107,14 @@ const Skills = () => {
 
               <div className="skill-list">
                 {group.items.map((item) => {
-                  const Icon = skillIcons[item.icon] || SiReact;
+                  const Icon = skillIcons[item.icon] || FaCode;
 
                   return (
                     <div key={item.label} className="skill-item">
                       <div
                         className="skill-badge"
-                        style={{ background: item.color }}
-                        title={item.label}
-                        aria-label={item.label}
+                        style={{ color: item.color }}
+                        aria-hidden="true"
                       >
                         <Icon />
                       </div>

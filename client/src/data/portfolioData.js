@@ -69,37 +69,77 @@ export const tools = [
 
 export const skills = [
   {
+    category: "Languages",
+    items: [
+      { label: "JavaScript (ES6+)", icon: "javascript", color: "#f7df1e" },
+      { label: "TypeScript", icon: "typescript", color: "#3178c6" },
+      { label: "Java", icon: "java", color: "#e76f00" },
+      { label: "SQL", icon: "sql", color: "#4479a1" },
+    ],
+  },
+  {
     category: "Frontend",
     items: [
-      { label: "HTML5", icon: "html5", color: "#f59277" },
-      { label: "CSS3", icon: "css3", color: "#5bb9fc" },
-      { label: "JavaScript", icon: "javascript", color: "#fdea5a" },
-      { label: "React", icon: "react", color: "#61d4f4" },
-      { label: "Vite", icon: "vite", color: "#b467fd" },
-      
-      { label: "Responsive", icon: "responsive", color: "#48e481" },
+      { label: "React.js", icon: "react", color: "#61dafb" },
+      { label: "Next.js", icon: "nextjs", color: "#111827" },
+      { label: "Redux", icon: "redux", color: "#764abc" },
+      { label: "HTML5", icon: "html5", color: "#e34f26" },
+      { label: "CSS3", icon: "css3", color: "#1572b6" },
+      { label: "Tailwind CSS", icon: "tailwind", color: "#06b6d4" },
+      { label: "Bootstrap", icon: "bootstrap", color: "#7952b3" },
     ],
   },
   {
     category: "Backend",
     items: [
-      { label: "Node.js", icon: "node", color: "#8ebf8a" },
-      { label: "Express", icon: "express", color: "#393838" },
-      { label: "MongoDB", icon: "mongodb", color: "#63aa64" },
-      { label: "JWT", icon: "jwt", color: "#de63fc" },
-      { label: "API", icon: "api", color: "#fcb944" },
-      { label: "REST", icon: "rest", color: "#716af8" },
+      { label: "Node.js", icon: "node", color: "#5fa04e" },
+      { label: "Express.js", icon: "express", color: "#555555" },
+      { label: "RESTful APIs", icon: "api", color: "#3973b7" },
+      { label: "JWT Authentication", icon: "jwt", color: "#d63aff" },
+      { label: "Firebase Authentication", icon: "firebase", color: "#ffca28" },
     ],
   },
   {
-    category: "Tools",
+    category: "Databases",
     items: [
-      { label: "Git", icon: "git", color: "#fd745c" },
-      { label: "GitHub", icon: "github", color: "#3e3d3d" },
-      { label: "VS Code", icon: "vscode", color: "#5faadc" },
-      { label: "Figma", icon: "figma", color: "#dd6945" },
-      { label: "Firebase", icon: "firebase", color: "#f4cd58" },
-      { label: "Postman", icon: "postman", color: "#f47344" },
+      { label: "MongoDB", icon: "mongodb", color: "#47a248" },
+      { label: "Mongoose", icon: "mongoose", color: "#880000" },
+      { label: "MySQL", icon: "mysql", color: "#4479a1" },
+      { label: "Redis", icon: "redis", color: "#d82c20" },
+    ],
+  },
+  {
+    category: "Cloud & DevOps",
+    items: [
+      { label: "AWS", icon: "aws", color: "#ff9900" },
+      { label: "Docker", icon: "docker", color: "#2496ed" },
+      { label: "Render", icon: "render", color: "#46e3b7" },
+      { label: "Vercel", icon: "vercel", color: "#111827" },
+      { label: "Cloudinary", icon: "cloudinary", color: "#3448c5" },
+    ],
+  },
+  {
+    category: "Developer Tools",
+    items: [
+      { label: "Git", icon: "git", color: "#f05032" },
+      { label: "GitHub", icon: "github", color: "#24292f" },
+      { label: "Postman", icon: "postman", color: "#ff6c37" },
+      { label: "VS Code", icon: "vscode", color: "#007acc" },
+      { label: "Figma", icon: "figma", color: "#f24e1e" },
+      { label: "Razorpay", icon: "razorpay", color: "#0c2451" },
+    ],
+  },
+  {
+    category: "AI & GenAI",
+    items: [
+      { label: "Gemini API", icon: "gemini", color: "#4285f4" },
+      { label: "LLM Integration", icon: "llm", color: "#8b5cf6" },
+      { label: "Prompt Engineering", icon: "prompt", color: "#ec4899" },
+      { label: "RAG", icon: "rag", color: "#14b8a6" },
+      { label: "Vector Embeddings", icon: "embeddings", color: "#6366f1" },
+      { label: "LangChain", icon: "langchain", color: "#1c3c3c" },
+      { label: "LangGraph", icon: "langgraph", color: "#1c3c3c" },
+      { label: "MCP", icon: "mcp", color: "#64748b" },
     ],
   },
 ];
