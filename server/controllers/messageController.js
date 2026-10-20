@@ -1,4 +1,4 @@
-// Handles the "Contact me" form submissions.
+// Handles the "Contact me" form.
 
 import Message from "../models/Message.js";
 

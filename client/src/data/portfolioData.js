@@ -9,11 +9,11 @@
 export const profile = {
   name: "Sahil Kumar",
   greeting: "Hi! I'm Sahil Kumar",
-  role: "Full-stack web developer based in India.",
+  role: "AI Full-stack web developer based in India.",
   heroDescription:
-    "I'm a full-stack developer working with the MERN stack (MongoDB, Express, React, Node.js). B.Tech in Computer Science (2024), currently building and shipping full-stack projects.",
+    "I'm a AI full-stack developer working with the MERN stack (MongoDB, Express, React, Node.js). B.Tech in Computer Science (2024), currently building and shipping full-stack projects.",
   aboutText:
-    "I'm a full-stack web developer with hands-on experience building complete applications end to end — from React interfaces to Node/Express APIs backed by MongoDB. I enjoy turning a design into a working product and I'm always learning new tools to build faster and better.",
+    "I'm a AI full-stack web developer with hands-on experience building complete applications end to end — from React interfaces to Node/Express APIs backed by MongoDB. I enjoy turning a design into a working product and I'm always learning new tools to build faster and better.",
   email: "sahilkumar7369@gmail.com",
   resumeLink: "/resume.pdf", // drop your resume PDF in client/public and keep this name, or change the link
   profileImage: "https://placehold.co/300x300/ef4d6b/ffffff?text=Photo", // replace with your own photo URL
@@ -22,9 +22,9 @@ export const profile = {
 
 // `icon` keys map to real logos in Footer.jsx (see the `socialIcons` map there).
 export const socials = [
-  { icon: "github", label: "GitHub", url: "https://github.com/your-username" },
-  { icon: "linkedin", label: "LinkedIn", url: "https://linkedin.com/in/your-username" },
-  { icon: "twitter", label: "Twitter", url: "https://twitter.com/your-username" },
+  { icon: "github", label: "GitHub", url: "https://github.com/sahilkumar720" },
+  { icon: "linkedin", label: "LinkedIn", url: "https://linkedin.com/in/sahilkumar789" },
+  { icon: "X", label: "X.com", url: "https://x.com/SahilkumarK1" },
 ];
 
 // Cards in the About section. `detail` can be a plain string, or an
@@ -33,7 +33,7 @@ export const aboutCards = [
   {
     icon: "code",
     title: "Languages",
-    detail: "HTML, CSS, JavaScript, React.js, Node.js",
+    detail: "HTML, CSS, JavaScript",
   },
   {
     icon: "education",
@@ -42,7 +42,7 @@ export const aboutCards = [
     title: "Education",
     detail: [
       "B.Tech in Computer Science",
-      "Your College Name, 2020 – 2024",
+      "IIIT UNA, H.P, 2020 – 2024",
     ],
   },
   {
@@ -60,10 +60,10 @@ export const tools = [
   // { key: "figma", label: "Figma" },
   // { key: "git", label: "Git" },
 
-    { key: "github", label: "GitHub", url: "https://github.com/your-username" },
-  { key: "linkedin", label: "LinkedIn", url: "https://linkedin.com/in/your-username" },
-  { key: "twitter", label: "Twitter", url: "https://twitter.com/your-username" },
-   { key: "instagram", label: "Instagram", url: "https://instagram.com/your-username" },
+    { key: "github", label: "GitHub", url: "https://github.com/sahilkumar720" },
+  { key: "linkedin", label: "LinkedIn", url: "https://linkedin.com/in/sahilkumar789" },
+  { key: "twitter", label: "Twitter", url: "https://twitter.com/SahilkumarK1" },
+   { key: "instagram", label: "Instagram", url: "https://instagram.com/sahilkumar720" },
 
 ];
 

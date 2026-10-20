@@ -1,13 +1,14 @@
 import { IoMail } from "react-icons/io5";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin} from "react-icons/fa";
 import { profile, socials } from "../data/portfolioData.js";
+import { BsTwitterX } from "react-icons/bs";
 import Reveal from "./Reveal.jsx";
 import "./Footer.css";
 
 const socialIcons = {
   github: <FaGithub size={17} />,
   linkedin: <FaLinkedin size={17} />,
-  twitter: <FaTwitter size={17} />,
+  X: <BsTwitterX size={17} />,
 };
 
 const Footer = () => {

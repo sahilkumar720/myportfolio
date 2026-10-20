@@ -1,8 +1,7 @@
 import { FiCode, FiBriefcase } from "react-icons/fi";
 import { FaGraduationCap } from "react-icons/fa";
-import { VscVscode } from "react-icons/vsc";
 import { RiTwitterXLine } from "react-icons/ri";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin} from "react-icons/fa";
 import {profile, aboutCards, tools } from "../data/portfolioData.js";
 import myprofile1 from "../assets/myprofile1.png";
 import { BsInstagram } from "react-icons/bs";

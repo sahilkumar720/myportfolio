@@ -1,6 +1,5 @@
 // A single portfolio project shown on the "My Work" section.
-// Edit the fields here if you want to track more info about each project
-// (e.g. a "featured" flag, tech stack tags, a video link, etc).
+
 
 import mongoose from "mongoose";
 
